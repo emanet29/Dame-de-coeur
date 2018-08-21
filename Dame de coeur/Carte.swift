@@ -21,7 +21,7 @@ class Carte: UIButton {
         super.init(coder: aDecoder)
     }
     
-    func tourner() {
+    func tourner(estCeLaDame: Bool) {
         var option: UIViewAnimationOptions!
         
         if face {
@@ -29,7 +29,11 @@ class Carte: UIButton {
             face = false
             option = .transitionFlipFromLeft
         } else {
-            setImage(#imageLiteral(resourceName: "pique"), for: .normal)
+            if estCeLaDame {
+                setImage(#imageLiteral(resourceName: "coeur"), for: .normal)
+            } else {
+                setImage(#imageLiteral(resourceName: "pique"), for: .normal)
+            }
             face = true
             option = .transitionFlipFromRight
         }
