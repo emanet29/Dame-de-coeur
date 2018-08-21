@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var carte0: UIButton!
-    @IBOutlet weak var carte1: UIButton!
+    @IBOutlet weak var carte0: Carte!
+    @IBOutlet weak var carte1: Carte!
     
-    @IBOutlet weak var carte2: UIButton!
-    @IBOutlet weak var carte3: UIButton!
+    @IBOutlet weak var carte2: Carte!
+    @IBOutlet weak var carte3: Carte!
     
     
     
@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func carteChoisie(_ sender: Any) {
+        if let carte = sender as? Carte {
+            carte.tourner()
+        }
     }
     
 
