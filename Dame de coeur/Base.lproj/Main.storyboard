@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,88 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dame_de_coeur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trouvez la dame de ❤️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ajX-eo-T31">
+                                <rect key="frame" x="20" y="40" width="335" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gi2-bP-Nbk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YPB-pf-kpc">
+                                <rect key="frame" x="20" y="120" width="335" height="527"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="90d-HZ-re5">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="253.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSf-Bv-5jl">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="253.5"/>
+                                                <state key="normal" title="Button" image="dos"/>
+                                                <connections>
+                                                    <action selector="carteChoisie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PMd-dz-6pv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6t-z5-rYi">
+                                                <rect key="frame" x="177.5" y="0.0" width="157.5" height="253.5"/>
+                                                <state key="normal" title="Button" image="dos"/>
+                                                <connections>
+                                                    <action selector="carteChoisie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iER-NZ-xIQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ddv-q9-mCn">
+                                        <rect key="frame" x="0.0" y="273.5" width="335" height="253.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMA-BW-QUi">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="253.5"/>
+                                                <state key="normal" title="Button" image="dos"/>
+                                                <connections>
+                                                    <action selector="carteChoisie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QfW-bI-Q1T"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx4-cY-e2K">
+                                                <rect key="frame" x="177.5" y="0.0" width="157.5" height="253.5"/>
+                                                <state key="normal" title="Button" image="dos"/>
+                                                <connections>
+                                                    <action selector="carteChoisie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3fr-QH-ivM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ajX-eo-T31" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2ZR-SB-5w4"/>
+                            <constraint firstItem="YPB-pf-kpc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2il-2i-5ks"/>
+                            <constraint firstItem="ajX-eo-T31" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HU6-Ge-T0S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajX-eo-T31" secondAttribute="trailing" constant="20" id="UAi-Uv-jgt"/>
+                            <constraint firstItem="YPB-pf-kpc" firstAttribute="top" secondItem="ajX-eo-T31" secondAttribute="bottom" constant="20" id="fLY-it-D6a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YPB-pf-kpc" secondAttribute="trailing" constant="20" id="jsf-rl-qJe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YPB-pf-kpc" secondAttribute="bottom" constant="20" id="nHi-0x-qdZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="carte0" destination="iSf-Bv-5jl" id="UHg-t8-Vj5"/>
+                        <outlet property="carte1" destination="O6t-z5-rYi" id="h23-dA-Gmr"/>
+                        <outlet property="carte2" destination="zMA-BW-QUi" id="Ghd-wV-ceF"/>
+                        <outlet property="carte3" destination="Zx4-cY-e2K" id="I6i-YP-I61"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="dos" width="500" height="700"/>
+    </resources>
 </document>
