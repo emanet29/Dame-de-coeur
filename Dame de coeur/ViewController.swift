@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     var dameDeCoeur: Int!
     var cartes = [Carte]()
+    var label: CestGagne?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
             if carte.tag == dameDeCoeur {
                 carte.tourner(estCeLaDame: true)
                 pasToucherCarte()
+                label = CestGagne(frame: CGRect(x: 20, y: self.view.frame.height / 2 - 50, width: self.view.frame.width - 40, height: 100))
+                view.addSubview(label!)
                 Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (t) in
                     self.rangerCartesEtPlcaerNouvelleDameDeCoeur()
                 }
@@ -54,6 +57,10 @@ class ViewController: UIViewController {
             carte.isUserInteractionEnabled = true
         }
         placerDameDeCoeur()
+        if label != nil {
+            label?.removeFromSuperview()
+            label = nil
+        }
     }
     
     func placerDameDeCoeur() {
